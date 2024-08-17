@@ -1,0 +1,532 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between; /* Space out left and right sections */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Add some padding */
+    background-color: #1b1b1b;
+    border-bottom: 1px solid #ddd; /* Optional border for separation */
+}
+
+/* Header Left */
+#header-left img {
+    border-radius: 50%; /* Optional: make the profile picture circular */
+}
+
+/* Header Right */
+#header-right {
+    display: flex;
+    flex-direction: column; /* Align text and social icons vertically */
+    align-items: flex-end; /* Align items to the right */
+    text-align: right;
+}
+
+/* Contact Information */
+#header-right p {
+    margin: 0;
+    font-size: 1rem; /* Adjust font size */
+    color: white; /* Text color */
+}
+
+.small {
+    font-size: 0.9rem; /* Slightly smaller text */
+}
+
+.number a {
+    color: #d32f2f; /* Match with CTA button color */
+    text-decoration: none; /* Remove underline */
+}
+
+.number a:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px; /* Space above social icons */
+}
+
+.social-icons a {
+    margin-left: 10px; /* Space between icons */
+}
+
+.social-icons img {
+    vertical-align: middle; /* Align icons with text */
+}
+
+/* Introduction Section */
+#intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #e63946;
+    color: white;
+    text-align: center;
+    gap: 20px;
+}
+
+#intro h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#intro button {
+    background-color: white;
+    color: #e63946;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#intro button:hover {
+    background-color: #ffb4a2;
+}
+
+#intro img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Area Section */
+#area {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 90%; /* Adjusted to be more responsive */
+    margin: auto;
+    display: block;
+}
+
+#area h2 {
+    font-size: 2.5em; /* Slightly smaller font size for better fit */
+    text-align: center;
+    color: #000;
+    text-shadow: 1px 1px 1px #000;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+#area-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center align content */
+    gap: 20px;
+}
+
+#area-text {
+    flex: 1;
+    max-width: 500px; /* Limit the width */
+    text-align: left;
+}
+
+#area ul {
+    padding-left: 0; /* Removed padding for cleaner look */
+    list-style: none;
+    font-weight: bold;
+    line-height: 1.8em; /* Adjusted line height */
+    font-size: 1.2em; /* Adjusted font size for better readability */
+}
+
+#area ul li {
+    padding-left: 0;
+    line-height: 1.6em; /* Adjusted line height */
+}
+
+#area-map {
+    flex: 1;
+    max-width: 100%; /* Ensure map is responsive */
+    border: 0; /* Remove border */
+}
+
+/* Button Styling */
+#button-container {
+    margin-top: 30px;
+    text-align: center; /* Center the button */
+}
+
+#button-container button {
+    background-color: #e63946; /* Red background */
+    color: white; /* White text */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#button-container button:hover {
+    background-color: #d62839; /* Darker red on hover */
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    /* Adjusting font sizes for mobile */
+    body {
+        font-size: 14px; /* Base font size for body text */
+    }
+
+    h1 {
+        font-size: 2.2em; /* 35px */
+    }
+
+    h2 {
+        font-size: 1.8em; /* 29px */
+    }
+
+    h3 {
+        font-size: 1.5em; /* 24px */
+    }
+
+    p {
+        font-size: 0.9em; /* 14px */
+    }
+
+    .small {
+        font-size: 0.75em; /* 12px */
+    }
+
+    button {
+        font-size: 1em; /* 16px */
+    }
+
+    #area-content {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+    #area-text {
+        text-align: center; /* Center text on smaller screens */
+        max-width: 90%; /* Allow text container to take more width */
+    }
+
+    #area ul {
+        font-size: 1em; /* Smaller font size for better fit on small screens */
+        line-height: 1.5em; /* Adjust line height for readability */
+    }
+
+    #area-map {
+        margin-top: 20px;
+        width: 100%; /* Ensure map takes full width */
+        height: 200px; /* Adjust height for better fit on small screens */
+    }
+
+    #button-container {
+        margin-top: 20px;
+    }
+
+    .why-cards {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        align-items: center; /* Center cards horizontally */
+    }
+
+    .why-card {
+        width: 90%; /* Make cards take most of the screen width */
+        max-width: 500px; /* Limit the maximum width */
+        margin-bottom: 20px; /* Space between cards */
+    }
+}
+
+/* Why Section */
+#why {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e63946;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#why h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.why-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.why-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.why-card img {
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    font-size: 1.2em;
+}
+
+#button-container {
+    margin-top: 30px;
+}
+
+#button-container button {
+    background-color: white;
+    color: #e63946;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#button-container button:hover {
+    background-color: #ffb4a2;
+}
+
+/* Pricing Section */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #333;
+    padding: 60px 0;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    flex-basis: 20%;
+    min-width: 250px;
+    flex-grow: 1;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.pricing-price {
+    font-size: 2.5em;
+    color: #e63946;
+    margin-bottom: 25px;
+}
+
+.pricing-features {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+}
+
+.get-started-btn {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Gallery Section */
+#gallery-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-item h3 {
+    margin-top: 10px;
+    font-size: 1.4em;
+}
+
+/* Footer */
+footer {
+    background-color: #1b1b1b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #e63946;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background: linear-gradient(135deg, #d32f2f, #b71c1c); /* Red gradient background */
+    color: #ffffff; /* White text for contrast */
+    text-align: center; /* Center align text */
+    padding: 60px 20px; /* Padding around the section */
+    border-radius: 0; /* No border-radius for full-width effect */
+    width: 100%; /* Full width of the page */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow to lift the section */
+    position: relative; /* Position relative for pseudo-elements */
+    overflow: hidden; /* Ensure no overflow from pseudo-elements */
+}
+
+/* Heading in CTA Section */
+.cta-section h2 {
+    font-size: 2.4rem; /* Slightly smaller font size for a more refined look */
+    margin-bottom: 20px; /* Space below the heading */
+    font-weight: 700; /* Bold text for emphasis */
+    line-height: 1.4; /* Adjust line height for better readability */
+    letter-spacing: 0.5px; /* Slightly increased letter spacing for a more polished look */
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: #ffffff; /* White background for button */
+    color: #d32f2f; /* Matching button text color */
+    padding: 15px 30px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners for button */
+    text-decoration: none; /* Remove underline from link */
+    font-size: 1.2rem; /* Larger font size for better readability */
+    font-weight: 600; /* Semi-bold text for emphasis */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+    border: 2px solid #d32f2f; /* Border to match button text color */
+    text-align: center; /* Center text inside button */
+    width: 100%; /* Button stretches to container width */
+    max-width: 300px; /* Prevent button from becoming too wide */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the button */
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+/* Hover Effects for CTA Button */
+.cta-button:hover {
+    background-color: #d32f2f; /* Button background color on hover */
+    color: #ffffff; /* White text color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Decorative Pseudo-elements */
+.cta-section::before,
+.cta-section::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2); /* Light white overlay for a professional touch */
+    top: -50%;
+    left: -50%;
+    z-index: 0;
+    animation: pulse 4s infinite; /* Pulse animation for visual interest */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.4;
+    }
+}
+
+/* Ensure content is above pseudo-elements */
+.cta-section > * {
+    position: relative;
+    z-index: 1;
+}
